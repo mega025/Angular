@@ -1,0 +1,45 @@
+<h2> Formulario Deporte </h2>
+
+<form method="post" action="" enctype="multipart/form-data">
+
+<div>
+  <label for="username"> nombre: </label>
+  <input type="text" id="username" name="usuario"
+         placeholder="Introduzca el nombre " value="" autocomplete="on"
+  required>
+  <br><br>
+  <label for="apellido"> Primer apellido: </label>
+  <input type="text" id="apellido" name="apellido"
+         placeholder="Introduzca el apellido" value="" autocomplete="off"
+         required>
+  <br><br>
+  <label for="apellido2"> Segundo apellido: </label>
+  <input type="text" id="apellido2" name="apellido"
+         placeholder="Introduzca el segundo apellido" value="" autocomplete="off"
+         >
+  <br><br>
+  <label for="deporte"> deportes </label>
+
+  <select id="deporte" name="deportes" required>
+    <option value="Futbol" selected>Futbol</option>
+    <option value="Baloncesto">Baloncesto</option>
+    <option value="Badmintón">Badmintón</option>
+    <option value="Tenis">Tenis</option>
+    <option value="hokey">hokey</option>
+  </select>
+  <br><br>
+
+  <div>
+    <p>Descripción tuya y porque quieres apuntarte a este deporte.</p>
+    <label for="message">Descripción: </label>
+    <br><br>
+    <textarea placeholder="mensaje" id="message"> </textarea>
+  </div>
+
+  <div>
+      <button type="submit">enviar</button>
+  </div>
+</div>
+
+</form>
+
