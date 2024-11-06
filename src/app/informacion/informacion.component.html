@@ -1,1 +1,9 @@
-<p>informacion works!</p>
+<div class="pokemon-contenedor" *ngIf="pokemon.length > 0">
+  <p *ngFor="let pokemon1 of pokemon">
+    <span class="id">{{pokemon1.id}} </span>
+    <span>{{pokemon1.nombre}} </span>
+    <span>{{pokemon1.descripcion}} </span>
+    <span><img src = "{{pokemon1.imagen_url}}" ></span>
+  </p>
+
+</div>

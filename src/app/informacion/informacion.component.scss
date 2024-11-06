@@ -1,0 +1,16 @@
+div{
+  display: grid ;
+  grid-template-columns: 1fr 1fr;
+  span{
+    img{
+      margin: 20px;
+      width: 150px;
+      height: 150px;
+    }
+    font-size: 11px;
+  }
+  .id{
+    color: black;
+    font-weight: bold;
+  }
+}
