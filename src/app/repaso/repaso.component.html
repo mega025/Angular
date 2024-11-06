@@ -1,45 +1,41 @@
-<h2> Formulario Deporte </h2>
 
-<form method="post" action="" enctype="multipart/form-data">
+<form method="post" [formGroup]="formulario" (ngSubmit)="enviar()">
 
 <div>
-  <label for="username"> nombre: </label>
-  <input type="text" id="username" name="usuario"
+  <label for="name-pokemon"> nombre: </label>
+  <input formControlName="name" type="text" id="name-pokemon" name="usuario"
          placeholder="Introduzca el nombre " value="" autocomplete="on"
-  required>
+  >
   <br><br>
-  <label for="apellido"> Primer apellido: </label>
-  <input type="text" id="apellido" name="apellido"
-         placeholder="Introduzca el apellido" value="" autocomplete="off"
-         required>
-  <br><br>
-  <label for="apellido2"> Segundo apellido: </label>
-  <input type="text" id="apellido2" name="apellido"
-         placeholder="Introduzca el segundo apellido" value="" autocomplete="off"
-         >
-  <br><br>
-  <label for="deporte"> deportes </label>
-
-  <select id="deporte" name="deportes" required>
-    <option value="Futbol" selected>Futbol</option>
-    <option value="Baloncesto">Baloncesto</option>
-    <option value="Badmintón">Badmintón</option>
-    <option value="Tenis">Tenis</option>
-    <option value="hokey">hokey</option>
-  </select>
-  <br><br>
-
-  <div>
-    <p>Descripción tuya y porque quieres apuntarte a este deporte.</p>
-    <label for="message">Descripción: </label>
-    <br><br>
-    <textarea placeholder="mensaje" id="message"> </textarea>
-  </div>
-
-  <div>
-      <button type="submit">enviar</button>
-  </div>
 </div>
 
+  <label for="categoria"> Tipo: </label>
+
+  <select formControlName="categoria" id="categoria" >
+    <option value="" selected>Selecciona una opción</option>
+    <option value="Fire" selected>Fuego</option>
+    <option value="Water">Agua</option>
+    <option value="Ground">Tierra</option>
+    <option value="Psychic">Psíquico</option>
+    <option value="Ghost">Fantasma</option>
+    <option value="Steel">Acero</option>
+    <option value="Flying">Volador</option>
+    <option value="Ice">Hielo</option>
+    <option value="Grass">Planta</option>
+    <option value="Bug">Bicho</option>
+    <option value="Electric">Eléctrico</option>
+    <option value="Normal">Normal</option>
+    <option value="Rock">Roca</option>
+    <option value="Fighting">Lucha</option>
+    <option value="Fairy">Hada</option>
+    <option value="Poison">Veneno</option>
+    <option value="Dragon">Dragón</option>
+    <option value="Dark">Siniestro</option>
+
+  </select>
+  <br><br>
+  <div class="button-forn">
+  <button type="submit" [disabled]="formulario.invalid">Buscar </button>
+  </div>
 </form>
 

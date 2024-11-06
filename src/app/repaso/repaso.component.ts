@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import {Elementos} from '../services/interfaces/elementos';
+import {FormBuilder, FormGroup, Validator, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-repaso',
@@ -7,35 +7,18 @@ import { Component } from '@angular/core';
   styleUrl: './repaso.component.scss'
 })
 export class RepasoComponent {
-/*nombre : string = "Xinjie"
- edad : number = 19
- alumnos : string[] = []
-  curso : number | null = 1
-  grupo : string | undefined = undefined
-  cambioColor: boolean = false
-  esconder : boolean = true
 
-  elementos: string[] =["elemento1", "elemento2","elemento3","elemento4","elemento5"]
-
-  elementos2: Elementos[] = [
-    {id:1 , nombre:"xinjie"},
-    {id:2, nombre: "santi"},
-    {id:3, nombre: "axel"},
-    {id:3, nombre: "axel"},
-  ]
+  formulario: FormGroup;
 
   constructor(
-   // private  nombreServicio: TipoDeServicio
-   )
-  {
-
-
-
+    private formBuildes: FormBuilder
+  ) {this.formulario = this.formBuildes.group({
+    name:["",[Validators.required, Validators.minLength(2)]],
+    categoria:["",[Validators.required]]
+  })
   }
-  toggleColor():void{
-this.cambioColor=!this.cambioColor;
+  enviar(){
+    alert("Formulario enviado");
   }
-  ocultar():void{
-  this.esconder = !this.esconder;
-  }*/
+
 }

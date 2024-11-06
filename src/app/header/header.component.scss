@@ -1,11 +1,10 @@
 header{
   padding: 12px 0px;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color:lightblue;
   color: black;
-
+  width: auto;
     a{
       color: red;
     }

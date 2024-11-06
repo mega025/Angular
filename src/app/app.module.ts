@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RepasoComponent } from './repaso/repaso.component';
 import { InformacionComponent } from './informacion/informacion.component';
 import { HomeComponent } from './home/home.component';
+import {ReactiveFormsModule, FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,10 +19,12 @@ import { HomeComponent } from './home/home.component';
     InformacionComponent,
     HomeComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

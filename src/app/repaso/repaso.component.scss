@@ -1,6 +1,6 @@
 form{
   text-align: center;
-
+  padding-top: 15px;
 }
 div{
   p{
@@ -10,7 +10,32 @@ div{
  label{
    font-weight: bold;
  }
+  input{
+    width: 100%;
+  }
+
 }
-h2{
-  text-align: center;
+select{
+  width: 100%;
 }
+.button-forn{
+  button{
+    display: block;
+    margin: 0 0 0 auto;
+    border-radius: 10px;
+    background:lightblue;
+    outline: none;
+    transition: .24s;
+    padding: 5px 10px;
+
+    &:hover{
+      background: lightgreen;
+    }
+    &[disabled]{
+      display: none
+    ;
+    }
+  }
+
+}
+
