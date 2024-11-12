@@ -9,6 +9,10 @@ import { RepasoComponent } from './repaso/repaso.component';
 import { InformacionComponent } from './informacion/informacion.component';
 import { HomeComponent } from './home/home.component';
 import {ReactiveFormsModule, FormsModule} from "@angular/forms";
+import { ModalComponent } from './modal/modal.component';
+import {provideHttpClient, withInterceptorsFromDi} from '@angular/common/http';
+import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +21,9 @@ import {ReactiveFormsModule, FormsModule} from "@angular/forms";
     FooterComponent,
     RepasoComponent,
     InformacionComponent,
-    HomeComponent
+    HomeComponent,
+    ModalComponent,
+    PokemonDetailComponent
   ],
     imports: [
         BrowserModule,
@@ -25,7 +31,11 @@ import {ReactiveFormsModule, FormsModule} from "@angular/forms";
         ReactiveFormsModule,
         FormsModule
     ],
-  providers: [],
+  providers: [
+    provideHttpClient(
+      withInterceptorsFromDi()
+    )
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

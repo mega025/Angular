@@ -1,9 +1,22 @@
 <div class="pokemon-contenedor" *ngIf="pokemon.length > 0">
   <p *ngFor="let pokemon1 of pokemon">
     <span class="id">{{pokemon1.id}} </span>
-    <span>{{pokemon1.nombre}} </span>
-    <span>{{pokemon1.descripcion}} </span>
-    <span><img src = "{{pokemon1.imagen_url}}" ></span>
+    <span class="name">{{pokemon1.nombre}} </span>
+    <span class="descripcion">{{pokemon1.descripcion}} </span>
+    <br>
+    <span class="foto"><img src = "{{pokemon1.imagen_url}}" ></span>
+    <button type="button" (click)="mostrarMas(pokemon1)">Ver más</button>
   </p>
 
 </div>
+
+<div class="pokemon-contenedor" *ngIf="pokemon.length > 0">
+  <p *ngFor="let pokemon1 of pokemonApi">
+    <span >{{pokemon1.name}} </span>
+    <button type="button" (click)="detallesPokemon(pokemon1.name)">Ver informacion</button>
+  </p>
+
+</div>
+
+<app-modal *ngIf="mostrarModal"></app-modal>
+

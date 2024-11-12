@@ -17,6 +17,9 @@ export class RepasoComponent {
     categoria:["",[Validators.required]]
   })
   }
+  VerMas(){
+
+  }
   enviar(){
     alert("Formulario enviado");
   }
