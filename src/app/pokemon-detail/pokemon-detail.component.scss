@@ -1,0 +1,23 @@
+.padre{
+  text-align: center;
+  background-color: lightblue;
+  border: solid 1px black;
+  border-radius: 30px;
+  h1{
+    font-size: 40px;
+  }
+  .atributos{
+    font-size: 25px;
+  }
+  p{
+    color: white;
+  }
+  span{
+    color: red;
+  }
+  img{
+    height: 250px;
+    width: 250px;
+
+  }
+}
