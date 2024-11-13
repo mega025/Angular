@@ -4,6 +4,7 @@ import {InformacionService} from '../services/modales/informacion.service';
 import {EnviarPokemonService} from '../services/modales/pokemon/enviar-pokemon.service';
 import {PokemonApiService} from '../services/modales/pokemon/pokemon-api.service';
 import {Router} from '@angular/router';
+import {PokemonDetailService} from '../services/modales/pokemon/pokemon-detail.service';
 @Component({
   selector: 'app-informacion',
   templateUrl: './informacion.component.html',
@@ -18,6 +19,7 @@ export class InformacionComponent implements OnInit{
     private informacionService: InformacionService,
     private enviarPokemonService: EnviarPokemonService,
     private pokemonapiService: PokemonApiService,
+    private pokemonDetailService: PokemonDetailService,
     private router: Router
   ){}
 
@@ -61,7 +63,8 @@ export class InformacionComponent implements OnInit{
         "se desliza en su sombra y espera su oportunidad en silencio.", imagen_url: "https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/094.png"}
   ]
 
-  detallesPokemon(nombre:string){
+  detallesPokemon(pk: PokemonApi){
+    this.pokemonDetailService.detallado(pk)
     this.router.navigate(['detalles']);
   }
 

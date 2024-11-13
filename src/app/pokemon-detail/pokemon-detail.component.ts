@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PokemonDetailService} from '../services/modales/pokemon/pokemon-detail.service';
+import {PokemonApi} from '../services/interfaces/pokemon';
 
 @Component({
   selector: 'app-pokemon-detail',
@@ -8,18 +9,19 @@ import {PokemonDetailService} from '../services/modales/pokemon/pokemon-detail.s
 })
 export class PokemonDetailComponent implements OnInit{
 
-  mostrarDetail:string =""
+  pokemon: PokemonApi | null = {
+    name: "",
+    url: ""
+  }
 
   constructor(
     private pokemonDetailService: PokemonDetailService
   ) {}
 
   ngOnInit() {
-    this.pokemonDetailService.detalles$.subscribe(de =>{
-      this.mostrarDetail = de;
+    this.pokemonDetailService.detalles$.subscribe(pk =>{
+      this.pokemon = pk;
     })
   }
-  verDetail(pk:string){
-    this.mostrarDetail
-  }
+
 }

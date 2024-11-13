@@ -13,7 +13,7 @@
 <div class="pokemon-contenedor" *ngIf="pokemon.length > 0">
   <p *ngFor="let pokemon1 of pokemonApi">
     <span >{{pokemon1.name}} </span>
-    <button type="button" (click)="detallesPokemon(pokemon1.name)">Ver informacion</button>
+    <button type="button" (click)="detallesPokemon(pokemon1)">Ver informacion</button>
   </p>
 
 </div>
