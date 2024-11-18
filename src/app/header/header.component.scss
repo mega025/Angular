@@ -1,0 +1,25 @@
+nav{
+  display: none;
+
+  &.active{
+    display: block;
+    width: 65%;
+    max-width: 300px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    a:first-of-type{
+      margin-top: 20%;
+    }
+    a:last-of-type{
+      margin-top: 0;
+    }
+    button{
+      top:10px;
+      right:10px;
+      padding: 5px 7px;
+    }
+  }
+}
