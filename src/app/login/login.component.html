@@ -1,15 +1,22 @@
 <div class="text-center mt-5">
-    <span > Logo</span>
+    <!-- https://codingpotions.com/angular-login-sesion para hacer conectar y hace run login -->
+    <span> Logo</span>
+    <p class="mt-3  fw-bold" > Iniciar sesión</p>
 </div>
 <div class="text-center mt-5">
     <label>Usuario: </label>
     <input type="text" class="ms-2">
     <br>
+
     <label class="mt-3">Contraseña:</label>
-    <input type="text" class="ms-2">
+    <input  type="{{Tipo}}" class="ms-2 ">
+    <button type="button" (click)="toggleOcultar()" class="bi-eye"></button>
+
+
 </div>
 <div class="text-center mt-5">
-    <button type="button"> Entrar </button>
+    <button type="button" class="mb-3" (click)="Iniciar()"> Entrar </button>
     <br>
-    <button type="button" class="mt-3"> Registrarse</button>
+    <p> O </p>
+    <button type="button"  (click)="Registrar()"> Registrarse</button>
 </div>
