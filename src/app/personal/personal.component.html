@@ -1,0 +1,67 @@
+<div class="row">
+    <span class="text-center fw-bold m-4"> Personal</span>
+    <div class=" recipiente border border-dark">
+        <label class="col-10">Esta Semana</label>
+        <button type="button" class="triangulo position-relative col-2" (click)="toggleOcultar()" >
+            <i class="bi bi-triangle-fill " ></i>
+        </button>
+    </div>
+    <div class="text-center" *ngIf="ocultar">
+        <a class="d-block  text-black text-decoration-none" > Tarea </a>
+        <br>
+        <a class="text-black text-decoration-none"> Descripcion + fecha</a>
+        <br>
+        <div class="mt-3">
+            <button type="button" class="btn btn-danger"  >
+                <i class="bi bi-trash"></i>
+            </button>
+            <button type="button" class="btn btn-primary mx-5"  >
+                Completado
+            </button>
+            <button type="button" class=""  >
+                <i class="bi-pencil-square"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class=" recipiente border border-dark">
+        <label class="col-10">Terminados</label>
+        <button type="button" class="triangulo position-relative col-2" (click)="toggleOcultar2()" >
+            <i class="bi bi-triangle-fill " ></i>
+        </button>
+    </div>
+    <div class="text-center" *ngIf="ocultar2">
+        <a class="d-block  text-black text-decoration-none" > Tarea(Completada) </a>
+        <br>
+        <a class="text-black text-decoration-none"> Descripcion</a>
+        <br>
+    </div>
+
+    <div class=" recipiente border border-dark">
+
+        <label class="col-10">Práximo</label>
+        <button type="button" class="triangulo position-relative col-2" (click)="toggleOcultar3()" >
+            <i class="bi bi-triangle-fill " ></i>
+        </button>
+    </div>
+    <div class="text-center" *ngIf="ocultar3">
+        <a class="d-block  text-black text-decoration-none" > Tarea </a>
+        <br>
+        <a class="text-black text-decoration-none"> Descripcion + fecha</a>
+        <br>
+        <div class="mt-3">
+            <button type="button" class="btn btn-danger"  >
+                <i class="bi bi-trash"></i>
+            </button>
+            <button type="button" class="btn btn-primary mx-5"  >
+                Completado
+            </button>
+            <button type="button" class=""  >
+                <i class="bi-pencil-square"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<div>
+    <button class=" añadir bi bi-plus position-fixed"></button>
+</div>

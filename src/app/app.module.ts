@@ -11,6 +11,10 @@ import { RegisterComponent } from './register/register.component';
 import { LayoutSinHeaderComponent } from './layout-sin-header/layout-sin-header.component';
 import { LayoutConHeaderComponent } from './layout-con-header/layout-con-header.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { PersonalComponent } from './personal/personal.component';
+import { FamiliaComponent } from './familia/familia.component';
+import { DeporteComponent } from './deporte/deporte.component';
+import { CitasComponent } from './citas/citas.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { InicioComponent } from './inicio/inicio.component';
     RegisterComponent,
     LayoutSinHeaderComponent,
     LayoutConHeaderComponent,
-    InicioComponent
+    InicioComponent,
+    PersonalComponent,
+    FamiliaComponent,
+    DeporteComponent,
+    CitasComponent
   ],
   imports: [
     BrowserModule,

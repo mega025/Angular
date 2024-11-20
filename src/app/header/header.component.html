@@ -8,14 +8,14 @@
     </div>
 
     <nav class="bg-dark " [class.active]="ver" >
-        <a class="text-white d-block text-decoration-none">Inicio</a>
-        <a class="text-white d-block text-decoration-none"> Personal </a>
-        <a class="text-white d-block text-decoration-none"> Familia</a>
-        <a class="text-white d-block text-decoration-none"> Deporte</a>
-        <a class="text-white d-block text-decoration-none"> Citas</a>
-        <a class="text-white d-block text-decoration-none"> Notificacion</a>
-        <a class="text-white d-block text-decoration-none"> Tema</a>
-        <a class="text-white d-block text-decoration-none"> Contacto</a>
+        <button type="button" class="text-black d-block text-decoration-none" (click)="Inicio()">Inicio</button>
+        <button type="button" class="text-black d-block text-decoration-none" (click)="Personal()"> Personal </button>
+        <button type="button" class="text-black d-block text-decoration-none" (click)="Familia()"> Familia</button>
+        <button type="button" class="text-black d-block text-decoration-none" (click)="Deporte()"> Deporte</button>
+        <button type="button" class="text-black d-block text-decoration-none" (click)="Citas()"> Citas</button>
+        <button type="button" class="text-black d-block text-decoration-none"> Notificacion</button>
+        <button type="button" class="text-black d-block text-decoration-none"> Tema</button>
+        <button type="button" class="text-black d-block text-decoration-none"> Contacto</button>
             <button type="button" class="btn btn-light position-absolute" (click)="toggleVer()">
                 <i class="bi bi-x-lg"></i>
             </button>
