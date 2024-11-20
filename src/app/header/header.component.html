@@ -1,4 +1,4 @@
-<header class="w-100 px-3 position-sticky top-0 py-3 bg-danger row m-0 align-items-center">
+<header class="w-100 px-3 position-sticky top-0 py-3 bg-danger row m-0 align-items-center z-3">
     <div class="col-2">
         <span class="text-white"> Logo</span>
     </div>
@@ -7,10 +7,15 @@
         <input type="text">
     </div>
 
-    <nav class="bg-dark " [class.active]="ver">
+    <nav class="bg-dark " [class.active]="ver" >
         <a class="text-white d-block text-decoration-none">Inicio</a>
-        <a  class="text-white d-block text-decoration-none"> Lista de tarea</a>
-        <a  class="text-white d-block text-decoration-none"> Contacto</a>
+        <a class="text-white d-block text-decoration-none"> Personal </a>
+        <a class="text-white d-block text-decoration-none"> Familia</a>
+        <a class="text-white d-block text-decoration-none"> Deporte</a>
+        <a class="text-white d-block text-decoration-none"> Citas</a>
+        <a class="text-white d-block text-decoration-none"> Notificacion</a>
+        <a class="text-white d-block text-decoration-none"> Tema</a>
+        <a class="text-white d-block text-decoration-none"> Contacto</a>
             <button type="button" class="btn btn-light position-absolute" (click)="toggleVer()">
                 <i class="bi bi-x-lg"></i>
             </button>

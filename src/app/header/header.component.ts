@@ -8,8 +8,14 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   ver:boolean = false;
+  ver2:boolean = false;
 
   toggleVer(){
     this.ver = !this.ver;
+  }
+
+
+  toggleVer2(){
+    this.ver2 = !this.ver2;
   }
 }

@@ -17,11 +17,14 @@
     <br>
     <label class="mt-3">Contraseña:</label>
     <br>
-    <input type="text" class="ms-2">
+    <input type="{{Tipo}}" class="ms-2">
+    <button type="button" (click)="toggleOcultar()" class="bi-eye"></button>
+
     <br>
     <label class="mt-3">Confirmar contraseña:</label>
     <br>
-    <input type="text" class="ms-2">
+    <input type="{{Tipo2}}" class="ms-2">
+    <button type="button" (click)="toggleOcultar2()" class="bi-eye"></button>
 </div>
 <div class="text-center mt-5">
     <button type="button" (click)="Iniciar()"> Registrarse</button>
