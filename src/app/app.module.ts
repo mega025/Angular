@@ -15,6 +15,8 @@ import { PersonalComponent } from './personal/personal.component';
 import { FamiliaComponent } from './familia/familia.component';
 import { DeporteComponent } from './deporte/deporte.component';
 import { CitasComponent } from './citas/citas.component';
+import { AnadirComponent } from './anadir/anadir.component';
+import { EditarComponent } from './editar/editar.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { CitasComponent } from './citas/citas.component';
     PersonalComponent,
     FamiliaComponent,
     DeporteComponent,
-    CitasComponent
+    CitasComponent,
+    AnadirComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,

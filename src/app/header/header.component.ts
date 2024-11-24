@@ -38,4 +38,7 @@ export class HeaderComponent {
   Citas(){
     this.router.navigate(['Citas']);
   }
+  Cerrar(){
+    this.router.navigate([""]);
+  }
 }
