@@ -1,32 +1,42 @@
-<div class="text-center">
-    <h1 class="fw-bold"> Añadir nueva tarea</h1>
-    <input type="text"  placeholder="nombre de la tarea">
-    <br>
 
-</div>
-<textarea placeholder="Descripcion" class=" mt-5"></textarea>
-<div class="row">
-    <label class="col 6">Incio</label>
-    <label class="col 6">Fin</label>
-    <br>
-</div>
-<div class="row">
-    <input class="col 6" type="date">
-    <input class="col 6" type="date">
-</div>
-<br>
-<div>
-    <label> Categoría : </label>
-    <select>
-        <option value="Personal">Personal</option>
-        <option value="Familia">Familia</option>
-        <option value="Deporte">Deporte</option>
-        <option value="Citas">Citas</option>
-    </select>
-</div>
-<br>
-<div class="row">
-<button type="button" class="btn btn-danger col-6">Cancelar</button>
-<button type="button" class="btn btn-primary col-6">Confirmar</button>
+<form method="post" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="text-center">
+        <h1 class="fw-bold">Añadir nueva tarea</h1>
+        <input formControlName="name" type="text" placeholder="Nombre de la tarea" class="form-control">
 
-</div>
+        <br>
+    </div>
+    <div>
+        <textarea formControlName="description" placeholder="Descripción" class="form-control mt-3"></textarea>
+
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <label for="startDate">Inicio</label>
+            <input id="startDate" formControlName="startDate" type="date" class="form-control">
+
+        </div>
+        <div class="col-md-6">
+            <label for="endDate">Fin</label>
+            <input id="endDate" formControlName="endDate" type="date" class="form-control">
+
+        </div>
+    </div>
+    <br>
+    <div>
+        <label for="categoria">Categoría:</label>
+        <select formControlName="categoria" id="categoria" class="form-control">
+            <option value="">Seleccionar categoría</option>
+            <option value="Personal">Personal</option>
+            <option value="Familia">Familia</option>
+            <option value="Deporte">Deporte</option>
+            <option value="Citas">Citas</option>
+        </select>
+
+    </div>
+    <br>
+    <div class="row">
+        <button type="button" class="btn btn-danger col-6">Cancelar</button>
+        <button type="submit" class="btn btn-primary col-6" [disabled]="formulario.invalid">Confirmar</button>
+    </div>
+</form>

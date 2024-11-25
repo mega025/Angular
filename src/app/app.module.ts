@@ -17,6 +17,7 @@ import { DeporteComponent } from './deporte/deporte.component';
 import { CitasComponent } from './citas/citas.component';
 import { AnadirComponent } from './anadir/anadir.component';
 import { EditarComponent } from './editar/editar.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -35,11 +36,12 @@ import { EditarComponent } from './editar/editar.component';
     AnadirComponent,
     EditarComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
