@@ -1,0 +1,21 @@
+<form method="post" [formGroup]="formulario2">
+<label for="categoria"> Opciones:</label>
+    <select  formControlName="categoria" id="categoria">
+        <option value="Todas">Todas</option>
+        <option value="Pendiente">Pendiente</option>
+        <option value="Finzalizado">Finzalizado</option>
+    </select>
+
+
+</form>
+
+
+<div >
+    <p *ngFor="let lista1 of lista" class="row ">
+        <span class="nombre col-3">nombre :{{lista1.nombre}}
+        </span> <span class="estado col-3"> estado: {{lista1.estado}} </span>
+        <button type="button" class="col-3" (click)="mostrarMas(lista)">Ver más</button>
+
+    </p>
+</div>
+<app-detalles-tarea-examen *ngIf="mostrarModal"></app-detalles-tarea-examen>

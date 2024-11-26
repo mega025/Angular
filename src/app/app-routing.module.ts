@@ -10,6 +10,8 @@ import {FamiliaComponent} from "./familia/familia.component";
 import {DeporteComponent} from "./deporte/deporte.component";
 import {CitasComponent} from "./citas/citas.component";
 import {AnadirComponent} from "./anadir/anadir.component";
+import {ListaTareaExamenComponent} from "./lista-tarea-examen/lista-tarea-examen.component";
+import {DetallesTareaExamenComponent} from "./detalles-tarea-examen/detalles-tarea-examen.component";
 
 const routes: Routes = [
     {
@@ -26,6 +28,8 @@ const routes: Routes = [
             {path: "Familia", component: FamiliaComponent},
             {path: "Deporte", component: DeporteComponent},
             {path: "Citas", component: CitasComponent},
+            {path: "Examen", component: ListaTareaExamenComponent},
+            {path: "Detalles", component: DetallesTareaExamenComponent},
         ]
     }
 

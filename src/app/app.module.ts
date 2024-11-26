@@ -18,6 +18,9 @@ import { CitasComponent } from './citas/citas.component';
 import { AnadirComponent } from './anadir/anadir.component';
 import { EditarComponent } from './editar/editar.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { BotonExamenComponent } from './boton-examen/boton-examen.component';
+import { ListaTareaExamenComponent } from './lista-tarea-examen/lista-tarea-examen.component';
+import { DetallesTareaExamenComponent } from './detalles-tarea-examen/detalles-tarea-examen.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import {ReactiveFormsModule} from "@angular/forms";
     DeporteComponent,
     CitasComponent,
     AnadirComponent,
-    EditarComponent
+    EditarComponent,
+    BotonExamenComponent,
+    ListaTareaExamenComponent,
+    DetallesTareaExamenComponent
   ],
     imports: [
         BrowserModule,
