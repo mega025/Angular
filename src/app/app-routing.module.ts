@@ -12,6 +12,8 @@ import {CitasComponent} from "./citas/citas.component";
 import {AnadirComponent} from "./anadir/anadir.component";
 import {ListaTareaExamenComponent} from "./lista-tarea-examen/lista-tarea-examen.component";
 import {DetallesTareaExamenComponent} from "./detalles-tarea-examen/detalles-tarea-examen.component";
+import {DetalleProductoComponent} from "./detalle-producto/detalle-producto.component";
+import {ProductoComponent} from "./producto/producto.component";
 
 const routes: Routes = [
     {
@@ -23,6 +25,7 @@ const routes: Routes = [
     },
     {
         path: "", component: LayoutConHeaderComponent, children: [
+
             {path: "Inicio", component: InicioComponent},
             {path: "Personal", component: PersonalComponent},
             {path: "Familia", component: FamiliaComponent},
@@ -30,8 +33,11 @@ const routes: Routes = [
             {path: "Citas", component: CitasComponent},
             {path: "Examen", component: ListaTareaExamenComponent},
             {path: "Detalles", component: DetallesTareaExamenComponent},
+            {path: "Producto",component: ProductoComponent},
+            {path: "Detalles-producto", component:DetalleProductoComponent}
         ]
-    }
+    },
+
 
 ]
 

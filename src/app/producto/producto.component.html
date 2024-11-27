@@ -1,0 +1,14 @@
+<div class="row ">
+    <div class="col-6 shadow-sm py-4 my-3 rounded-3 text-center" *ngFor="let prodcto of arryaProducto">
+       <span > nombre : {{prodcto.nombre}}</span>
+        <br>
+       <span> precio : {{prodcto.precio}}</span>
+        <br>
+        <button type="button" class="rounded-3 mt-5" (click)="enviarDatosProducto(prodcto)">
+            ver mas
+        </button>
+
+
+    </div>
+
+</div>

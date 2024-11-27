@@ -17,10 +17,12 @@ import { DeporteComponent } from './deporte/deporte.component';
 import { CitasComponent } from './citas/citas.component';
 import { AnadirComponent } from './anadir/anadir.component';
 import { EditarComponent } from './editar/editar.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {ReactiveFormsModule, FormsModule} from "@angular/forms";
 import { BotonExamenComponent } from './boton-examen/boton-examen.component';
 import { ListaTareaExamenComponent } from './lista-tarea-examen/lista-tarea-examen.component';
 import { DetallesTareaExamenComponent } from './detalles-tarea-examen/detalles-tarea-examen.component';
+import { ProductoComponent } from './producto/producto.component';
+import { DetalleProductoComponent } from './detalle-producto/detalle-producto.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +42,16 @@ import { DetallesTareaExamenComponent } from './detalles-tarea-examen/detalles-t
     EditarComponent,
     BotonExamenComponent,
     ListaTareaExamenComponent,
-    DetallesTareaExamenComponent
+    DetallesTareaExamenComponent,
+    ProductoComponent,
+    DetalleProductoComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         NgbModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        FormsModule
     ],
   providers: [],
   bootstrap: [AppComponent]
