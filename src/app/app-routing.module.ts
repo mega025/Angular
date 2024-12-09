@@ -4,10 +4,12 @@ import {LoginComponent} from './login/login.component';
 import {AppComponent} from './app.component';
 import {LayoutConHeaderComponent} from './layout-con-header/layout-con-header.component';
 import {PanelControlComponent} from './panel-control/panel-control.component';
+import {RegistroComponent} from './registro/registro.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "login", pathMatch: "full" },// si no hay nada se redirige al login siempre
   {path: "login", component: LoginComponent},
+  {path: "registro", component: RegistroComponent},
   {path: "app", component: LayoutConHeaderComponent, children: [
       {path:"", redirectTo: "panel-controls", pathMatch: "full" },
       {path: "panel-control" , component: PanelControlComponent},
