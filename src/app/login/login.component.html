@@ -1,0 +1,45 @@
+<div class=" w-100 position-relative container-login">
+
+ <div class="content w-100 h-100 position-relative bg-dark">
+
+   <form [formGroup]="formulario" (submit)="enviar()" class="position-relative bg-white m-auto py-4 px-3 shadow-sm rounded-3">
+
+     <div class="border-bottom border-light-subtle pb-3 mb-3">
+       <h1 class="h3 text-center mb-0"> Login</h1>
+     </div>
+
+     <div class="mb-3">
+       <label for="username" class="form-label">Usuario</label>
+       <input formControlName="usuario" class="form-control" type="text" id="username" placeholder="usuario"
+              [ngClass]="{'is-invalid' : formulario.get('usuario')?.touched && formulario.get('usuario')?.invalid,
+              'is-valid': formulario.get('usuario')?.touched && formulario.get('usuario')?.invalid}" >
+     <div class="invalid-feedback" *ngIf="formulario.get('usuario')?.touched && formulario.get('usuario')?.invalid">
+       El usuario es obligatorio
+     </div>
+     </div>
+
+     <div class="mb-3">
+       <label for="password"  class="form-label"> contraseña</label>
+       <div class="position-relative show-password">
+         <i  class="bi  position-absolute d-flex align-items-center justify-content-center px-3"
+             (click)="ToggleOcultar()" [ngClass]="changeType ? 'bi-eye-fill' : 'bi-eye-slash-fill' ">
+         </i>
+         <input [ngClass]="{'is-invalid' : formulario.get('contrasena')?.touched && formulario.get('contrasena')?.invalid,
+         'is-valid': formulario.get('contrasena')?.touched && formulario.get('contrasena')?.invalid}
+" formControlName="contrasena" class="form-control" type="{{changeType ? 'text' : 'password'}}" id="password" placeholder="contraseña">
+         <div class="invalid-feedback" *ngIf="formulario.get('contrasena')?.touched && formulario.get('contrasena')?.invalid">
+           La contraseña es obligatorio
+         </div>
+       </div>
+     </div>
+
+     <div class="text-end mb-4 mt-2">
+       <button type="submit" class="btn btn-primary" [disabled]="formulario.invalid"> Iniciar Sesión</button>
+     </div>
+     <div class="border-top border-light-subtle pt-3">
+       <button type="button" class="btn btn-outline-dark w-100">Registrarme</button>
+     </div>
+   </form>
+ </div>
+
+</div>
