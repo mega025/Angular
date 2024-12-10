@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {PopupService} from '../services/utils/popup.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +20,7 @@ ToggleOcultar(){
   constructor(
     private formBuilder: FormBuilder,
     private popupService: PopupService,
+    private router: Router,
   ) {
 
   this.formulario = this.formBuilder.group({
@@ -33,9 +35,11 @@ ToggleOcultar(){
     this.popupService.showMessage("success",
       "Sesion iniciada",
       "Hola")
-    alert(this.formulario.value)
   }
 
+  }
+  Registrarme(){
+  this.router.navigate(['registro']);
   }
 
 }
