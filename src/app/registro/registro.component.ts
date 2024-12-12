@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {PopupService} from '../services/utils/popup.service';
 import {RegisterService} from '../services/auth/register.service';
 import {NewUser} from '../services/interfaces/usuario';
+import {Observable} from 'rxjs';
 
 class PopUpService {
 }
@@ -55,7 +56,7 @@ export class RegistroComponent {
           this.popupService.showMessage(
             "success",
             "Rgistro exitoso",
-            "Te has registrado correctamente ")
+            "Te has registrado correctamente")
         },
         error: error => {
           console.log(error);
