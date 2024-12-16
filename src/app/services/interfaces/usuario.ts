@@ -12,3 +12,9 @@ export interface LoginUser{
   username: string;
   password: string;
 }
+export interface AllUsers{
+  id: number;
+  nombre: string;
+  email: string;
+  edad: number;
+}

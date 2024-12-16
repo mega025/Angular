@@ -23,7 +23,7 @@ ToggleOcultar(){
     private formBuilder: FormBuilder,
     private popupService: PopupService,
     private router: Router,
-    private loginService: LoginService
+    private loginService: LoginService,
   ) {
 
   this.formulario = this.formBuilder.group({
@@ -35,18 +35,26 @@ ToggleOcultar(){
   if (this.formulario.invalid)
     return;
 
+
     const credenciales :LoginUser = {
       username: this.formulario.value.username,
       password: this.formulario.value.password,
 
     }
+
       this.loginService.LoginV2(credenciales).subscribe({
 
       next: (response) => {
-        this.popupService.showMessage(
-          "success",
+
+      this.loginService.setUser(credenciales);
+        this.popupService.loading(
           "Iniciar sesión",
-          response.message,)
+          "Se ha iniciado sesión correctamente. espere unos segundos")
+        setTimeout(() => {
+          this.popupService.close()
+          this.router.navigate(['users'])
+        },
+          2000)
 
 
       },

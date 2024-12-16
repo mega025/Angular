@@ -14,17 +14,25 @@ export class LoginService {
   ) { }
   Login(credenciales: LoginUser): Observable<any> {
     return this.http.post(this.url + "/login", credenciales, {
-      headers:{
-        "Content-Type": "application/json",
-      }
+
     })
   }
 
   LoginV2(credenciales: LoginUser): Observable<any> {
-    return this.http.post(this.url + "/login/v2", credenciales, {
-      headers:{
-        "Content-Type": "application/json",
-      }
-    })
+    return this.http.post(this.url + "/login/v2", credenciales)
+  }
+  setUser(datos:LoginUser): void{
+    sessionStorage.setItem("user", JSON.stringify(datos));
+  }
+  getUser(): LoginUser|null {
+    const user = JSON.parse(<string>sessionStorage.getItem("user"));
+  return user ? user : null;
+
+  }
+  deleteUser(): void{
+    const user = JSON.parse(<string>sessionStorage.getItem("user"));
+if (user) {
+  sessionStorage.removeItem("user");
+}
   }
 }
