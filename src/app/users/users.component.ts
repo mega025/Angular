@@ -15,9 +15,7 @@ export class UsersComponent implements OnInit {
   showModal: boolean = false;
   users : AllUsers[] = []
 
-  showModal1(){
-    this.showModal = !this.showModal;
-  }
+
 
   constructor(
     public usersService : UsersService,

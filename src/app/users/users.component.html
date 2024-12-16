@@ -1,6 +1,6 @@
 <div class=" position-relative my-3 px-3  row row-gap-3 justify-content-center align-items-center" *ngIf="users.length > 0">
 
-  <button type="button" class="w-100 btn btn-outline-primary mb-3" (click)="showModal1"> Añadir Usuario</button>
+  <button type="button" class="w-100 btn btn-outline-primary mb-3" (click)="addNewUser()"> Añadir Usuario</button>
 
   <div class="col-5 shadows-sm rounded-3  py-3 px-3 ">
   <p *ngFor="let usu of users">
