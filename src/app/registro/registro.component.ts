@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {PopupService} from '../services/utils/popup.service';
+import {RegisterService} from '../services/auth/register.service';
+import {NewUser} from '../services/interfaces/usuario';
+import {Observable} from 'rxjs';
 
 class PopUpService {
 }
@@ -18,12 +21,13 @@ export class RegistroComponent {
   constructor(
     public formBuilder: FormBuilder,
     private popupService: PopupService,
-    private router: Router
+    private router: Router,
+    private registroService: RegisterService
   ) {
     this.registerForm = formBuilder.group({
       username: ['', [Validators.required]],
-      name: ['', [Validators.required]],
-      age: ['0'],
+      nombre: ['', [Validators.required]],
+      edad: ['0'],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]],
@@ -35,14 +39,29 @@ export class RegistroComponent {
   }
 
   enviar () {
-    if (this.registerForm.invalid) {
+    if (this.registerForm.invalid)
       return;
+
+    const nuevoUsuario :NewUser = {
+      username: this.registerForm.value.username,
+      password: this.registerForm.value.password,
+      nombre: this.registerForm.value.nombre,
+      email: this.registerForm.value.email,
+      edad: this.registerForm.value.edad
+
     }
 
-
-    this.popupService.showMessage(
-      "success", "Registrarse",
-      "Se ha registrado correctamente")
+      this.registroService.createUser(nuevoUsuario).subscribe({
+        next: () => {
+          this.popupService.showMessage(
+            "success",
+            "Rgistro exitoso",
+            "Te has registrado correctamente")
+        },
+        error: error => {
+          console.log(error);
+        }
+      })
 
     this.router.navigate(['login'])
   }

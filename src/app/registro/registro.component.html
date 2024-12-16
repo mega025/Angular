@@ -7,12 +7,12 @@
           <input id="name"
                  type="text"
                  class="form-control"
-                 formControlName="name"
+                 formControlName="nombre"
                  [ngClass]="{
-                 'is-invalid': registerForm.get('name')?.touched && registerForm.get('name')?.invalid,
-                 'is-valid': registerForm.get('name')?.touched && registerForm.get('name')?.valid
+                 'is-invalid': registerForm.get('nombre')?.touched && registerForm.get('nombre')?.invalid,
+                 'is-valid': registerForm.get('nombre')?.touched && registerForm.get('nombre')?.valid
           }">
-          <div class="invalid-feedback" *ngIf="registerForm.get('name')?.touched && registerForm.get('name')?.invalid">
+          <div class="invalid-feedback" *ngIf="registerForm.get('nombre')?.touched && registerForm.get('nombre')?.invalid">
             El nombre es obligatorio
           </div>
         </div>
