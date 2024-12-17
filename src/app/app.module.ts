@@ -14,6 +14,7 @@ import {authInterceptor} from './services/interceptor/auth.interceptor';
 import { UsersComponent } from './users/users.component';
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 import { ModalAddUserComponent } from './modal-add-user/modal-add-user.component';
+import { CharacterComponent } from './character/character.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { ModalAddUserComponent } from './modal-add-user/modal-add-user.component
     RegistroComponent,
     UsersComponent,
     BottomNavComponent,
-    ModalAddUserComponent
+    ModalAddUserComponent,
+    CharacterComponent
   ],
   imports: [
     BrowserModule,

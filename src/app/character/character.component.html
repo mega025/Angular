@@ -1,0 +1,23 @@
+<div class="container position-relative px-3 pt-3 mb-5">
+
+  <h2 class="h4 text-center"> Personajes</h2>
+
+</div>
+
+
+<div class="row justify-content-around align-items-center row-gap-3" *ngIf="personajes.length > 0">
+  <div class="cold-12 shadow-sm rounded-3 py-3 px-3 position-relative  align-items-center row"
+       *ngFor="let pj of personajes">
+    <div class="col-7">
+      <p> id: {{ pj.id }} </p>
+      <p>nombre :{{ pj.name }} </p>
+      <p>description: {{ pj.description }} </p>
+      <button type="button" class="btn btn-primary m-3"><i class="bi bi-star-fill"></i></button>
+      <button type="button" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>
+    </div>
+    <div class="col-5 d-flex align-items-center justify-content-center overflow-hidden">
+      <img class="rounded-3 shadows-sm" src="{{pj.thumbnail.path + '.' +  pj.thumbnail.extension}}">
+    </div>
+
+  </div>
+</div>
