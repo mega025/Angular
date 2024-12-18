@@ -8,6 +8,7 @@ import {RegistroComponent} from './registro/registro.component';
 import {UsersComponent} from './users/users.component';
 import {isLoogedGuard} from './services/guards/is-looged.guard';
 import {CharacterComponent} from './character/character.component';
+import {FavoritoComponent} from './favorito/favorito.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "login", pathMatch: "full" },// si no hay nada se redirige al login siempre
@@ -17,7 +18,8 @@ const routes: Routes = [
 
       {path:"", component:LayoutConHeaderComponent, canActivate:[isLoogedGuard],children:[
           {path: "users", component: UsersComponent,},
-          {path: "marvel", component: CharacterComponent}
+          {path: "marvel", component: CharacterComponent},
+          {path: "favoritos", component: FavoritoComponent}
         ] },
 
 

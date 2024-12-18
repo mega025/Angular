@@ -46,7 +46,7 @@ ToggleOcultar(){
 
       next: (response) => {
 
-      this.loginService.setUser(credenciales);
+      this.loginService.setUser(credenciales, response.user_id);
         this.popupService.loading(
           "Iniciar sesión",
           "Se ha iniciado sesión correctamente. espere unos segundos")

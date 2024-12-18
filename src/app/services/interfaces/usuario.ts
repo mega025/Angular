@@ -11,6 +11,7 @@ export interface NewUser {
 export interface LoginUser{
   username: string;
   password: string;
+  id?:number;
 }
 export interface AllUsers{
   id: number;

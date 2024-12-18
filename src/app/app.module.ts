@@ -15,6 +15,7 @@ import { UsersComponent } from './users/users.component';
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 import { ModalAddUserComponent } from './modal-add-user/modal-add-user.component';
 import { CharacterComponent } from './character/character.component';
+import { FavoritoComponent } from './favorito/favorito.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { CharacterComponent } from './character/character.component';
     UsersComponent,
     BottomNavComponent,
     ModalAddUserComponent,
-    CharacterComponent
+    CharacterComponent,
+    FavoritoComponent
   ],
   imports: [
     BrowserModule,

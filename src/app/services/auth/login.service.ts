@@ -21,8 +21,8 @@ export class LoginService {
   LoginV2(credenciales: LoginUser): Observable<any> {
     return this.http.post(this.url + "/login/v2", credenciales)
   }
-  setUser(datos:LoginUser): void{
-    sessionStorage.setItem("user", JSON.stringify(datos));
+  setUser(datos:LoginUser, user_id: any): void{
+    sessionStorage.setItem("user", JSON.stringify({...datos, id: user_id}));
   }
   getUser(): LoginUser|null {
     const user = JSON.parse(<string>sessionStorage.getItem("user"));

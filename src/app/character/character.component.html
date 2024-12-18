@@ -11,7 +11,7 @@
     <div class="col-7">
       <p> id: {{ pj.id }} </p>
       <p>nombre :{{ pj.name }} </p>
-      <p>description: {{ pj.description }} </p>
+      <p *ngIf="pj.description">description: {{ pj.description }} </p>
       <button type="button" class="btn btn-primary m-3"><i class="bi bi-star-fill"></i></button>
       <button type="button" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>
     </div>
