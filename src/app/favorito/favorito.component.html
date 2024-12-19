@@ -2,13 +2,32 @@
 
   <h2 class="h4 text-center"> Personajes Favoritos</h2>
 
-  <div class="text-center mt-5">
+  <div class="row justify-content-around align-items-center row-gap-3" *ngIf="favoritosMarvel.length > 0">
+    <div class="cold-12 shadow-sm rounded-3 py-3 px-3 position-relative  align-items-center row"
+         *ngFor="let pj of favoritosMarvel">
+      <div class="col-7">
+        <p> id: {{ pj.id }} </p>
+        <p>nombre :{{ pj.name }} </p>
+        <p *ngIf="pj.description">description: {{ pj.description }} </p>
+        <button type="button" class="btn btn-primary m-3" (click)="eliminar(pj.idSpring)">
+          <i class="bi bi-trash-fill"></i>
+        </button>
+      </div>
+      <div class="col-5 d-flex align-items-center justify-content-center overflow-hidden">
+        <img class="rounded-3 shadows-sm" src="{{pj.thumbnail.path + '.' +  pj.thumbnail.extension}}">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="text-center mt-5" *ngIf="favoritosMarvel.length <= 0">
     <p class="">
     No tienes item añadido
   </p>
+    <button type="button" class="btn btn-warning" routerLink="/marvel">
+      Ver personajes
+    </button>
   </div>
-  <button type="button" class="btn btn-warning" routerLink="/marvel">
-    Ver personajes
-  </button>
+
 
 </div>

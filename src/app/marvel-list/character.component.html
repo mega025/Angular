@@ -12,8 +12,9 @@
       <p> id: {{ pj.id }} </p>
       <p>nombre :{{ pj.name }} </p>
       <p *ngIf="pj.description">description: {{ pj.description }} </p>
-      <button type="button" class="btn btn-primary m-3"><i class="bi bi-star-fill"></i></button>
-      <button type="button" class="btn btn-danger"><i class="bi bi-trash-fill"></i></button>
+      <button type="button" class="btn btn-primary m-3" (click)="addFavorito(pj.id)">
+      <i class="bi bi-star-fill"></i>
+      </button>
     </div>
     <div class="col-5 d-flex align-items-center justify-content-center overflow-hidden">
       <img class="rounded-3 shadows-sm" src="{{pj.thumbnail.path + '.' +  pj.thumbnail.extension}}">

@@ -14,7 +14,7 @@ import {authInterceptor} from './services/interceptor/auth.interceptor';
 import { UsersComponent } from './users/users.component';
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 import { ModalAddUserComponent } from './modal-add-user/modal-add-user.component';
-import { CharacterComponent } from './character/character.component';
+import { CharacterComponent } from './marvel-list/character.component';
 import { FavoritoComponent } from './favorito/favorito.component';
 @NgModule({
   declarations: [

@@ -6,5 +6,11 @@ export interface Personajes {
     extension:string;
     path: string;
   }
+  idSpring?:number;
+}
 
+
+export interface PersonajesFavorito {
+  id: number;
+  personajeMarvel:number
 }

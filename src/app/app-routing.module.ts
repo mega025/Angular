@@ -7,7 +7,7 @@ import {PanelControlComponent} from './panel-control/panel-control.component';
 import {RegistroComponent} from './registro/registro.component';
 import {UsersComponent} from './users/users.component';
 import {isLoogedGuard} from './services/guards/is-looged.guard';
-import {CharacterComponent} from './character/character.component';
+import {CharacterComponent} from './marvel-list/character.component';
 import {FavoritoComponent} from './favorito/favorito.component';
 
 const routes: Routes = [

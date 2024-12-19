@@ -18,4 +18,12 @@ export class FavoritosService {
 
     return this.http.get(this.url + "/" + userId );
   }
+
+  addFavorto(userId :any,idFavorito: number): Observable<any> {
+    return this.http.get(`${this.url}/${userId}/${idFavorito}`);
+  }
+
+  deleteFav( idFavorito: number): Observable<any> {
+    return this.http.post(`${this.url}/delete`, {favoritoMarvel: idFavorito});
+  }
 }
